@@ -13,7 +13,7 @@ int main(int argc, char* argv[]) {
 	printf("\n\nFile output of \"%s\":\n%s\n", "./saveFile", TFSReadData("./saveFile.txt"));
 	TFSFreeBuf();
 
-	TFSMoveFile("./saveFile", "./newSaveFile");
+	//TFSMoveFile("./saveFile", "./newSaveFile");
 
 	while (1) {
 
