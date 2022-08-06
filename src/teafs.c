@@ -31,7 +31,7 @@ int TFSWriteData(char writePath[], char writeData[], int writeMode) {
 
 	// If NULL was returned it failed to create or write to file, return -1 to show error.
 	if (filePtr == NULL) {
-		printf("Debug:\n");
+		printf("\nDebug of write data:\n");
 		printf("	Path: %s\n", writePath);
 		printf("	Data: %s\n", writeData);
 
@@ -64,7 +64,7 @@ char * TFSReadData(char readPath[]) {
 
 	// Error check opening the file and return "Error" if there is an issue.
 	if (filePtr == NULL) {
-		printf("Debug:\n");
+		printf("\nDebug of read data:\n");
 		printf("	Path: %s\n", readPath);
 
 		printf("\nUnable to open the file.\n");
@@ -117,7 +117,7 @@ int TFSCreateFile(char filePath[]) {
 
 	// If NULL was returned it failed to create or write to file, return -1 to show error.
 	if (filePtr == NULL) {
-		printf("Debug:\n");
+		printf("\nDebug of create file:\n");
 		printf("    Path: %s\n", filePath);
 
 		printf("\nFailed to create the file.\n");

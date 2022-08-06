@@ -11,6 +11,10 @@
  #define TEAFSAPI
 #endif
 
+TEAFSAPI char *TFSReadData(char readPath[]);
+
 TEAFSAPI int TFSFreeBuf();
 TEAFSAPI int TFSWriteData(char writePath[], char writeData[], int writeMode);
-TEAFSAPI char *TFSReadData(char readPath[]);
+TEAFSAPI int RemoveFile(char filePath[]);
+TEAFSAPI int TFSCreateFile(char filePath[]);
+TEAFSAPI int TFSMoveFile(char oldPath[], char newPath[]);
