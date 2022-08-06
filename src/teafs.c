@@ -126,6 +126,15 @@ int TFSCreateFile(char filePath[]) {
 	// Close the file to save.
 	fclose(filePtr);
 
-	// Quit succesfully.
+	// Quit successfully.
+	return 0;
+}
+
+// Define a function that takes in two character arrays. The first parameter is the old path to the file. The second parameter is the destination of the file.
+int TFSMoveFile(char oldPath[], char newPath[]) {
+	// Move the file to the new location.
+	rename(oldPath, newPath);
+
+	// Return successfully.
 	return 0;
 }
