@@ -106,3 +106,26 @@ int TFSRemoveFile(char filePath[]) {
 		return -1;
 	}
 }
+
+// Define a function that takes in a character array. The first parameter defines which file should be created.
+int TFSCreateFile(char filePath[]) {
+	// File pointer to hold the reference to the file
+	FILE *filePtr;
+
+	// Open the file in write mode
+	filePtr = fopen(filePath, "w");
+
+	// If NULL was returned it failed to create or write to file, return -1 to show error.
+	if (filePtr == NULL) {
+		printf("Debug:\n");
+		printf("    Path: %s\n", filePath);
+
+		printf("\nFailed to create the file.\n");
+	}
+
+	// Close the file to save.
+	fclose(filePtr);
+
+	// Quit succesfully.
+	return 0;
+}
