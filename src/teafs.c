@@ -96,3 +96,13 @@ char * TFSReadData(char readPath[]) {
 	// Return buf (now contains the contents of the file)
 	return buf;
 }
+
+// Define a function that takes in a character array. The first parameter defines which file should be deleted.
+int TFSRemoveFile(char filePath[]) {
+	// If the file was removed successfully, it will return a 0, otherwise return a -1 to indicate error.
+	if (remove(filePath) == 0) {
+		return 0;
+	} else {
+		return -1;
+	}
+}
