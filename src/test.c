@@ -10,8 +10,10 @@ int main(int argc, char* argv[]) {
 	TFSWriteData("./saveFile", "\n", 1);
 	TFSWriteData("./saveFile", "Data3", 1);
 
-	printf("\n\nFile output of \"%s\":\n%s\n", "./saveFile", TFSReadData("./10mb.txt"));
+	printf("\n\nFile output of \"%s\":\n%s\n", "./saveFile", TFSReadData("./saveFile.txt"));
 	TFSFreeBuf();
+
+	TFSMoveFile("./saveFile", "./newSaveFile");
 
 	while (1) {
 
